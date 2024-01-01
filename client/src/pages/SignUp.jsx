@@ -36,7 +36,7 @@ const SignUp = () => {
       // Successful response handling
       setLoading(false);
       setError(null)
-      toast.success('User created successfully!');
+     
       navigate('/sign-in')
     } catch (error) {
       setLoading(false)
