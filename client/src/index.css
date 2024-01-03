@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-body
-{
-background-color: #1A1B4B;
+body{
+background-color: #1b1b32;
 }
