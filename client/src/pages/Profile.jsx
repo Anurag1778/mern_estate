@@ -146,6 +146,7 @@ const Profile = () => {
         </span>
       </div>
       <p className="text-sky-400 font-semibold mt-4">{error ? error :''}</p>
+      <p className="text-green-700 mt-5">{updateSuccess?'User is ipdated successfully!':''}</p>
     </div>
   );
 };
