@@ -171,7 +171,7 @@ const Profile = () => {
           placeholder="password"
           className="border p-3 rounded-lg"
           id="password"
-          onChange={handleChange }
+          onChange={handleChange}
         />
         <button disabled={loading} className="bg-slate-700 uppercase rounded-lg  p-3  text-white hover:opacity-95 disabled:opacity-80">
          {loading?'Loading...':'Update'}
