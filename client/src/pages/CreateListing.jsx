@@ -302,7 +302,7 @@ export default function CreateListing() {
                   <p className='text-white'>Discounted price</p>
 
                   {formData.type === 'rent' && (
-                    <span className='text-xs text-white'>($ / month)</span>
+                    <span className='text-xs text-white'>(₹ / month)</span>
                   )}
                 </div>
               </div>
