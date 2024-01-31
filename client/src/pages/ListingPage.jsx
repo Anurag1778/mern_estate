@@ -17,7 +17,7 @@ import {
 import Contact from '../components/Contact';
 
 
-export  const ListingPage=()=> {
+ const ListingPage=()=> {
 
   SwiperCore.use([Navigation]);
   const [listing, setListing] = useState(null);
@@ -32,8 +32,15 @@ export  const ListingPage=()=> {
     const fetchListing = async () => {
       try {
         setLoading(true);
+        if (!params.listingId) {
+          setError(true);
+          setLoading(false);
+          return;
+        }
+  
         const res = await fetch(`/api/listing/get/${params.listingId}`);
         const data = await res.json();
+        
         if (data.success === false) {
           setError(true);
           setLoading(false);
@@ -47,9 +54,10 @@ export  const ListingPage=()=> {
         setLoading(false);
       }
     };
+  
     fetchListing();
   }, [params.listingId]);
-
+  
   return (
     <main>
   {loading && <p className='text-center my-7 text-2xl text-white'>Loading...</p>}
@@ -92,8 +100,8 @@ export  const ListingPage=()=> {
         <p className='text-2xl font-semibold text-white'>
           {listing.name} - ₹{' '}
           {listing.offer
-            ? listing.discountPrice.toLocaleString('en-US')
-            : listing.regularPrice.toLocaleString('en-US')}
+            ? listing.discountPrice.toLocaleString('en-IN')
+            : listing.regularPrice.toLocaleString('en-IN')}
           {listing.type === 'rent' && ' / month'}
         </p>
         <p className='flex items-center mt-6 gap-2 text-slate-600  text-sm text-white'>
@@ -153,3 +161,6 @@ export  const ListingPage=()=> {
 </main>
   );
 }
+
+
+export default  ListingPage;
