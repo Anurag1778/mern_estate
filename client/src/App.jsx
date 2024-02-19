@@ -22,7 +22,6 @@ function App() {
    <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/about' element={<About/>}/>
-    <Route path='/profile' element={<Profile/>}/>
     <Route path='/sign-up' element={<SignUp/>}/>
     <Route path='/sign-in' element={<Signin/>}/>
     <Route path='/listing/:listingId' element={<ListingPage/>}/>
@@ -30,6 +29,8 @@ function App() {
 
     <Route element={<PrivateRoute/>}/>
     <Route path='/profile' element={<Profile/>}/>
+
+    
     <Route path='/create-listing' element={<CreateListing/>}/>
     <Route path='/update-listing/:listingId' element={<UpdateListing/>}/>
    </Routes>

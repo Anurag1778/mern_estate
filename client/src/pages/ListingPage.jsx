@@ -105,11 +105,11 @@ import Contact from '../components/Contact';
           {listing.type === 'rent' && ' / month'}
         </p>
         <p className='flex items-center mt-6 gap-2 text-slate-600  text-sm text-white'>
-          <FaMapMarkerAlt className='text-green-700' />
+          <FaMapMarkerAlt className='text-red-700' />
           {listing.address}
         </p>
         <div className='flex gap-4'>
-          <p className='bg-red-900 w-full max-w-[200px] text-white text-center p-1 rounded-md'>
+          <p className='bg-green-600 w-full max-w-[200px] text-white text-center p-1 rounded-md'>
             {listing.type === 'rent' ? 'For Rent' : 'For Sale'}
           </p>
           {listing.offer && (
@@ -119,7 +119,7 @@ import Contact from '../components/Contact';
           )}
         </div>
 
-        <p className='text-white'>
+        <p className='text-yellow-500'>
           <span className='font-semibold text-white'>Description - </span>
           {listing.description}
         </p>
@@ -146,7 +146,7 @@ import Contact from '../components/Contact';
             {listing.furnished ? 'Furnished' : 'Unfurnished'}
           </li>
         </ul>
-        {currentUser && listing.userRef !== currentUser._id && !contact && (
+       <span className='text-green-300'> {currentUser && listing.userRef !== currentUser._id && !contact && (
           <button
             onClick={() => setContact(true)}
             className='bg-slate-700  text-white rounded-lg uppercase hover:opacity-95 p-3'
@@ -154,7 +154,7 @@ import Contact from '../components/Contact';
             Contact landlord
           </button>
         )}
-        {contact && <Contact listing={listing} />}
+        {contact && <Contact listing={listing} />}</span>
       </div>
     </div>
   )}
