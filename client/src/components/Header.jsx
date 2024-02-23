@@ -23,12 +23,12 @@ export const Header = () => {
     }
   }, [location.search]);
   return (
-    <header className='bg-slate-900 shadow-md'>
+    <header className='bg-pink-900 shadow-md'>
         <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
       <Link to='/'> 
       <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
         <span className='text-slate-100'>Yadav</span>
-        <span className='text-green-700'><span className='text-red-800'>E</span>state</span>
+        <span className='text-green-700'><span className='text-black'>Estate</span></span>
         </h1> 
 </Link>
         <form onSubmit={handleSubmit} className='bg-slate-100 p-2 rounded-lg flex items-center' >
@@ -48,7 +48,7 @@ export const Header = () => {
          <Link to="/about">
           <li  className='text-white  hidden sm:inline hover:underline'>About</li>
           </Link>
-         <Link to='/sign-in'>
+         <Link to='/profile'>
             {currentUser ? (
               <img
                 className='rounded-full h-7 w-7 object-cover'
@@ -56,7 +56,7 @@ export const Header = () => {
                 alt='profile'
               />
             ) : (
-              <li className=' text-white hover:underline'>Sign in</li>
+              <li className=' text-white hover:underline'>signin</li>
             )}
           </Link>
         </ul>

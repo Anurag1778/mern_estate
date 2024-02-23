@@ -50,7 +50,7 @@ export default function Home() {
       {/* top */}
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto'>
         <h1 className='text-white font-bold text-3xl lg:text-6xl'>
-          Find your next <span className='text-pink-500'>perfect</span>
+          Find your next <span className='text-pink-900'>perfect</span>
           <br />
           place with ease
         </h1>
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <Link
           to={'/search'}
-          className='text-xs sm:text-sm text-pink-700 font-bold hover:underline'
+          className='text-xs sm:text-sm text-pink-900 font-bold hover:underline'
         >
           Let's get started...
         </Link>
