@@ -5,7 +5,7 @@ import userRouter from './routes/user.route.js'
 import authRouter from './routes/auth.route.js'
 import cookieParser from 'cookie-parser';
 import listingRouter from './routes/listing.route.js'
-import Path  from 'path';
+import path  from 'path';
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log(" Mongodb Connection is Successfully ")
